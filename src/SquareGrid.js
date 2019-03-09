@@ -1,61 +1,45 @@
 import React, { Component } from "react";
-
+import data from "./data.json";
 class SquareGrid extends Component {
+
+ state = {
+     id: 0,
+     name: "",
+     pos: "",
+     picture: "",
+     salary: ""
+ };
+
+ componentDidMount() {
+     console.log(JSON.stringify(data));
+    //  let obj = data.filter(  )
+
+    // this.setState({
+    //     id: 0,
+    //     name: "",
+    //     pos: "",
+    //     picture: "",
+    //     salary: ""
+    // })
+ }
+
+
   render() {
     return (
       <div className="wrapper">
         <ul className="sq clearfix">
-          <li className="sq-item sq-item-large">
+          {data.map( (item, index) => { return ( 
+          <li key={item.id} className="sq-item">
             <a className="sq-item-anchor" href="">
-              <img className="sq-item-anchor-cover" alt="" />
-              <span className="sq-item-anchor-title">MLB</span>
+              <img
+                className="sq-item-anchor-cover"
+                src={item.picture}
+                alt=""
+              />
+              <span className="sq-item-anchor-title">{item.name}</span>
             </a>
           </li>
-          <li className="sq-item">
-            <a className="sq-item-anchor" href="">
-              MLB
-            </a>
-          </li>
-          <li className="sq-item">
-            <a className="sq-item-anchor" href="">
-              MLB
-            </a>
-          </li>
-          <li className="sq-item">
-            <a className="sq-item-anchor" href="">
-              MLB
-            </a>
-          </li>
-          <li className="sq-item sq-item-long sq-item-float-right">
-            <a className="sq-item-anchor" href="">
-              MLB
-            </a>
-          </li>
-          <li className="sq-item ">
-            <a className="sq-item-anchor" href="">
-              MLB
-            </a>
-          </li>
-          <li className="sq-item">
-            <a className="sq-item-anchor" href="">
-              MLB
-            </a>
-          </li>
-          <li className="sq-item">
-            <a className="sq-item-anchor" href="">
-              MLB
-            </a>
-          </li>
-          <li className="sq-item sq-item-wide">
-            <a className="sq-item-anchor" href="">
-              MLB
-            </a>
-          </li>
-          <li className="sq-item">
-            <a className="sq-item-anchor" href="">
-              MLB
-            </a>
-          </li>
+            ) } )}
         </ul>
       </div>
     );
