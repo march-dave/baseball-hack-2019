@@ -1,8 +1,14 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import App from "./App";
+import "./style.css";
 
 const Index = () => {
-  return <div>Hello React! You are ready for heroku</div>;
+  return (
+    <div>
+      <App />
+    </div>
+  );
 };
 
 ReactDOM.render(<Index />, document.getElementById("index"));
