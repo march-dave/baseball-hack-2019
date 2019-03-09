@@ -124,6 +124,48 @@ span {
     display: block;
 }
 
-.sq-item-anchor-salary::before {
+
+/* .sq-item-anchor-salary::before {
     content: '$'
+} */
+
+.cover-title {
+    font-size: 3vw;
+    /* font-family: "Yellowtail", cursive; */
+    font-weight: normal;
+    line-height: 1;
+    font-style: italic;
+    /* color: #134A8E; */
+    text-indent: 1em;
+}
+
+.cover-title-bluejays {
+    color: #134A8E;
+}
+
+.cover-title-tigers {
+    color: #fff;
+}
+
+.cover-salary {
+    color: #fff;
+    text-indent: 7em;
+}
+
+.find-team-div {
+    /* border: 10px solid #fff; */
+    width: 750px;
+    margin: 100px auto;
+}
+
+.find-team-span {
+    /* background-color: #fff; */
+    color: #fff;
+    display: inline;
+    margin-right: 10px;
+    font-style: italic;
+}
+
+.find-team-search {
+    height: 25px;
 }
